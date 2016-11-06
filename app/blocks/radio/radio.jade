@@ -1,0 +1,5 @@
+mixin radio(content)
+	+b('label').radio(for=content.value)&attributes(attributes)
+		+e('input').input(id=content.value name=content.name type='radio' value=content.value checked=content.checked)
+		+e('span').check
+		+e('span').label= content.label

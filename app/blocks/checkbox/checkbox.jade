@@ -1,0 +1,5 @@
+mixin checkbox(content)
+	+b('label').checkbox&attributes(attributes)
+		+e('input').input(name=content.name type='checkbox' value=content.value checked=content.checked)
+		+e('span').check
+		+e('span').label= content.label

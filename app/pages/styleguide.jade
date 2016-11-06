@@ -1,0 +1,22 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/header/header
+include ../blocks/section-one/section-one
+include ../blocks/checkbox/checkbox.jade
+include ../blocks/radio/radio.jade
+
+block head
+    - var pageTitle = 'CSSSR Test Work';
+
+    - set_bemto_settings({ modifier: '--' })
+
+block content
+    +b.wrapper--bg
+        +e.inner
+            section
+                h2 Примеры радио-кнопок
+                +radio({"name": "accessory", "checked": true, "label": "Аксессуар для интерьера", "value": "accessory"})
+                +radio({"name": "accessory", "checked": false, "label": "Детская игрушка", "value": "toy"})
+            section
+                h2 Примеры чекбоксов
+                +checkbox({"name": "color", "label": "Белый", "value": "white", "checked": true})
+                +checkbox({"name": "color", "label": "Серый", "value": "grey", "checked": false})

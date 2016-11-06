@@ -1,0 +1,36 @@
+.radio
+	margin-bottom 20px
+	display flex
+	cursor pointer
+	&:last-child
+		margin-bottom 0
+
+	&__input
+		display none
+
+	&__check
+		flex-shrink 0
+		position relative
+		sprite $radio_default
+		&:after
+			position absolute
+			top 0
+			left 0
+			display none
+			content ''
+			sprite $radio_focus
+
+	&__label
+		padding 13px 0 0 0
+		font-family $font-pt-bold
+		font-size 20px
+		line-height 18px
+		color $dark
+
+	&__input:checked ~ &__check::after
+		display block
+
+	&:hover &__check
+		border-color #111
+	&:active &__check
+		border-color #111

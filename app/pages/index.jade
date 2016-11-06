@@ -1,0 +1,25 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/header/header
+include ../blocks/section-one/section-one
+include ../blocks/section-skills/section-skills
+include ../blocks/section-slider/section-slider
+include ../blocks/section-history/section-history
+include ../blocks/section-plan/section-plan
+include ../blocks/footer/footer
+
+block head
+	- var pageTitle = 'CSSSR Test Work';
+
+	- set_bemto_settings({ modifier: '--' })
+
+block content
+	+b.wrapper--bg
+		+e.inner
+			+header()
+			+section-one()
+			+section-skills()
+			+section-slider()
+			+section-history()
+			+section-plan()
+			+footer()
+

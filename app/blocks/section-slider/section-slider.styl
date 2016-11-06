@@ -1,0 +1,49 @@
+.section-slider
+
+	&--theme-csssr
+		height 170px
+		overflow hidden
+
+	&__title
+		@extend .section-skills__title
+
+	&__box
+		position relative
+		width 100%
+		height 80px
+		background: url('../images/slider-scale.png') center left no-repeat
+
+	&__psedo
+		position absolute
+		top 21px
+		sprite $psedo_down
+
+	&__item
+		position absolute
+		width 171px
+		top 66px
+		display inline-block
+		font-family $font-pt-bold
+		font-size 13px
+		line-height 19px
+
+		&--one
+			left 0
+
+		&--two
+			left 144px
+
+		&--three
+			left 371px
+
+		&--four
+			top 71px
+			left 629px
+	
+	&__link
+		color $darker
+		text-decoration none
+
+		&:hover,
+		&:active
+			text-decoration underline

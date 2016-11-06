@@ -1,0 +1,45 @@
+include ../checkbox/checkbox.jade
+
+mixin section-skills()
+	+b('section').section-skills.--theme-csssr&attributes(attributes)
+		+e.title Расскажите о себе чекбоксами
+		+e.descr
+			| Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+		+e('form').form
+			+e('ul').list
+				+e('li').item
+					+checkbox({"name": "bem", "label": "БЭМ/OOCSS", "value": "bem", "checked": true})
+				+e('li').item
+					+checkbox({"name": "jade", "label": "Pug (Jade)", "value": "jade", "checked": true})
+				+e('li').item
+					+checkbox({"name": "sass", "label": "Stylus/LESS/SASS", "value": "sass", "checked": true})
+				+e('li').item
+					+checkbox({"name": "svg", "label": "Работаю с SVG", "value": "svg", "checked": false})
+				+e('li').item
+					+checkbox({"name": "semantic", "label": "Верстаю семантично", "value": "semantic", "checked": true})
+				+e('li').item
+					+checkbox({"name": "accessibility", "label": "Accessibility (A11Y)", "value": "accessibility", "checked": false})
+				+e('li').item
+					+checkbox({"name": "es6", "label": "ES2015/ES2016", "value": "es6", "checked": false})
+				+e('li').item
+					+checkbox({"name": "gulp", "label": "Gulp/GRUNT", "value": "gulp", "checked": true})
+				+e('li').item
+					+checkbox({"name": "webpack", "label": "Webpack", "value": "webpack", "checked": false})
+				+e('li').item
+					+checkbox({"name": "webGL", "label": "Дружу с WebGL", "value": "webGL", "checked": false})
+				+e('li').item
+					+checkbox({"name": "jquery", "label": "jQuery", "value": "jquery", "checked": true})
+				+e('li').item
+					+checkbox({"name": "angular", "label": "Знаю/изучаю Angular", "value": "angular", "checked": false})
+				+e('li').item
+					+checkbox({"name": "react", "label": "Знаю/изучаю React", "value": "react", "checked": false})
+				+e('li').item
+					+checkbox({"name": "node", "label": "Знаю/изучаю Node.js", "value": "node", "checked": false})
+				+e('li').item
+					+checkbox({"name": "git", "label": "Использую Git", "value": "git", "checked": true})
+				+e('li').item
+					+checkbox({"name": "blog", "label": "Читаю blog.csssr.ru", "value": "ok", "checked": true})
+				+e('li').item
+					+checkbox({"name": "lazy", "label": "Я ленивый(-ая)", "value": "lazy", "checked": false})
+				+e('li').item
+					+checkbox({"name": "eng", "label": "У меня хороший английский", "value": "eng", "checked": false})
