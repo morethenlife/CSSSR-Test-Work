@@ -1,8 +1,8 @@
 mixin section-slider()
-	+b('section').section-slider.--theme-csssr&attributes(attributes)
+	+b('section')#range-slider.section-slider.--theme-csssr&attributes(attributes)
 		+e.title Уровень владения JavaScript
-		+e.box
-			+e.psedo
+		+e.box.js-section-slider__box
+			+e.psedo.js-section-slider__psedo
 			+e.item.--one
 				+e('a').link(href=jv0) Не владею
 			+e.item.--two
@@ -10,4 +10,4 @@ mixin section-slider()
 			+e.item.--three
 				+e('a').link(href=jv0) Использую готовые решения и умею их переделывать
 			+e.item.--four
-				+e('a').link(href=jv0) Пишу сложный JS с нуля
+				+e('a').link.js-section-slider__link(href=jv0) Пишу сложный JS с нуля
